@@ -1,0 +1,46 @@
+
+.container{
+  padding-top: 81px;
+}
+
+.bg-color{
+  background-color: #1a344c;
+}
+
+body {
+  margin-bottom:50px;
+}
+
+footer {
+  position: fixed;
+  height: 30px;
+  background-color: white;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+
+#card-border {
+  border: none;
+}
+
+.card-body {
+  background-color: black;
+}
+
+.card-title {
+  color: whitesmoke;
+
+}
+
+.card-text {
+  color: #b3b3b3;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------------------*/
+
