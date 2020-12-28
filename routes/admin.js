@@ -42,7 +42,7 @@ router.get('/add-product', function(req,res){
 
 router.post('/add-product',function(req,res){
   console.log(req.body);
-  /* console.log(req.files.Image); */
+  console.log(req.files.Image); 
 
 });
 
