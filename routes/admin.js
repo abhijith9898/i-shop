@@ -1,4 +1,5 @@
 var express = require('express');
+const productHelpers = require('../helpers/product-helpers');
 var router = express.Router();
 var productHelper = require('../helpers/product-helpers');
 /* GET users listing. */
@@ -6,35 +7,11 @@ var productHelper = require('../helpers/product-helpers');
 
 router.get('/', function (req, res, next) {
 
-  let products = [
-    {
-      name: "lorem",
-      description: "This is a good phone",
-      category: "Mobile",
-      image: "https://images.moneycontrol.com/static-mcnews/2020/09/Realme-7-Pro-1.jpg"
-    },
-    {
-      name: "lorem",
-      description: "This is a good phone",
-      category: "Mobile",
-      image: "https://images.moneycontrol.com/static-mcnews/2020/09/Realme-7-Pro-1.jpg"
-    },
-    {
-      name: "lorem",
-      description: "This is a good phone",
-      category: "Mobile",
-      image: "https://images.moneycontrol.com/static-mcnews/2020/09/Realme-7-Pro-1.jpg"
-    },
-    {
-      name: "lorem",
-      description: "This is a good phone",
-      category: "Mobile",
-      image: "https://images.moneycontrol.com/static-mcnews/2020/09/Realme-7-Pro-1.jpg"
-    },
-
-  ]
-
-  res.render('admin/view-products', { admin: true, products })
+  productHelpers.getAllProducts().then((products)=>{
+    console.log(products)
+    res.render('admin/view-products', { admin: true, products })
+  })
+  
 
 });
 
